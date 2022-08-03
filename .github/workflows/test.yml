@@ -1,0 +1,15 @@
+name: Test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo "Hello World" > test.log 2>&1
+        
+      - name: 
+        uses: action/upload-artifact@v3
+        with:
+          path: test.log
