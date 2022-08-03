@@ -18,7 +18,8 @@ jobs:
           for added_modified_file in "${added_modified_files[@]}"; do
           echo $(grep -o $'\t' ${added_modified_file} | wc -l) tabs - ${added_modified_file} >> 04gitops.log 2>&1 
           done
-          
+
+        name: Upload gitops  
       - uses: actions/upload-artifact@v3
         with:
           path: 04gitops.log
