@@ -10,6 +10,6 @@ jobs:
         run: echo "Hello World" > test.log 2>&1
         
       - name: 
-        uses: action/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           path: test.log
