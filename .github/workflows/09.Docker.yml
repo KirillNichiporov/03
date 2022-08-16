@@ -1,0 +1,24 @@
+name: ci
+
+on: pull-request
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+        
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.CV_TOKEN }}
+          
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/pluhin/docker_build:2
