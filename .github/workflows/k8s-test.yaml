@@ -40,4 +40,4 @@ jobs:
         SLACK_MESSAGE: 'Good:rocket:'
         SLACK_TITLE: Kubeval checks
         SLACK_USERNAME: testing-nichiporov
-        SLACK_WEBHOOK: T040YNDM84V/B042H2BF5B8/YKCYrtwa32NSvtpQLZHrwGV2
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
