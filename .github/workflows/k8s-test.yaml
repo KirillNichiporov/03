@@ -1,6 +1,6 @@
 name: k8s manifests
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   find-k8s-files:
@@ -40,4 +40,4 @@ jobs:
         SLACK_MESSAGE: 'Good:rocket:'
         SLACK_TITLE: Kubeval checks
         SLACK_USERNAME: testing-nichiporov
-        SLACK_WEBHOOK: https://hooks.slack.com/services/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
+        SLACK_WEBHOOK: T040YNDM84V/B042H2BF5B8/YKCYrtwa32NSvtpQLZHrwGV2
